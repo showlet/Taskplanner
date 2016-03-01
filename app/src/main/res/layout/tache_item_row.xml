@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:padding="5dp"
+    android:clickable="true"
+    card_view:cardBackgroundColor="@color/appPink"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="2dp"
+    android:id="@+id/tacheCard">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTaskTitre"
+            android:text="Décendre au sous-sol en sécurité"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:layout_margin="5dp"
+            android:singleLine="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relDeadline"
+            android:layout_below="@+id/txtTaskTitre">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTaskCreation"
+                android:text="31 Juillet 2088"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentTop="false"
+                android:singleLine="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTaskDeadline"
+                android:text="31 Juillet 2088"
+                android:drawableLeft="@drawable/ic_date_range_black_18dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentTop="false"
+                android:singleLine="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relUtilisateur"
+            android:layout_toRightOf="@+id/relDeadline"
+            android:layout_below="@+id/txtTaskTitre">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTaskUtilisateur"
+                android:text="Trail-Copter889"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

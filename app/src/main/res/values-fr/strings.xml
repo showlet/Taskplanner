@@ -1,0 +1,64 @@
+﻿<resources>
+    <string name="app_name">Task Planner</string>
+    <string name="drawer_open">Menu ouvert</string>
+    <string name="drawer_close">Menu fermé</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="action_logout">Se déconnecter</string>
+
+    <string name="my_projects">Mes projets</string>
+    <string name="my_tasks">Mes taches</string>
+    <string name="today_task">Aujourd\'hui</string>
+    <string name="filters">Filters</string>
+    <string name="settings">Paramètres</string>
+
+    <!-- Message Générique -->
+    <string name="creating_account">S\'inscrire ...</string>
+    <string name="authenticating">Authentification ...</string>
+    <string name="loading">Chargement ...</string>
+    <string name="login_failed">Échec de la connexion.</string>
+
+    <string name="tabOverview">Survol</string>
+    <string name="tabDetails">Détails</string>
+    <string name="tabMessages">Messages</string>
+    <string name="tabTasks">Tâches</string>
+
+    <!-- Messages d'erreur -->
+    <string name="invalid_email_error_message">Entrez une adresse mail valide.</string>
+    <string name="invalid_name_error_message">Le nom doit être d\'au moins 3 caractères.</string>
+    <string name="invalid_password_error_message">Mot de passe doit comporter au moins 6 caractères alphanumériques .</string>
+    <string name="unreachable_server_error_message">Nous n\'avons pas réussis à communiquer avec le serveur . S\'il vous plaît vérifier votre connexion réseau et réessayer !</string>
+
+    <!-- Task Adapter -->
+    <string name="date_ferme">Fermé le </string>
+    <string name="date_fini">Date de fin: </string>
+    <string name="tache"> Tâches</string>
+
+    <!-- Actionbar title -->
+    <string name="Actionbar_projects">Mes projets</string>
+    <string name="Actionbar_project">Détails de projet</string>
+    <string name="Actionbar_today">Aujourd\'hui</string>
+    <string name="Actionbar_tasks">Mes tâches</string>
+
+    <!-- Project overview -->
+    <string name="TacheToday">Tâche(s) pour aujourd\'hui</string>
+    <string name="TacheLate">Tâche(s) en retard</string>
+    <string name="TacheClosed">Tâche(s) finie(s)</string>
+
+    <!-- Task overview -->
+    <string name="TacheCreate">Créer le </string>
+    <string name="TacheDeadline">À faire pour le </string>
+
+    <string name="NotImplemented">Cette fonctionnalité n\'est pas encore implementée</string>
+
+    <string name="ProjectName">Nom du projet</string>
+    <string name="ProjectDescription">Description du projet</string>
+    <string name="ProjectDeadline">Date de fin</string>
+    <string name="ProjectEdit">Modifier</string>
+    <string name="ProjectAdd">Ajouter</string>
+
+    <string name="TaskName">Nom de la tâche</string>
+    <string name="TaskDescription">Description de la tâche</string>
+    <string name="TaskDeadline">Date de fin</string>
+    <string name="TaskEdit">Modifier</string>
+    <string name="TaskAdd">Ajouter</string>
+</resources>

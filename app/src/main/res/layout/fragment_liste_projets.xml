@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="false"
+                android:layout_gravity="right"
+                android:elevation="4dp"
+                android:orientation="vertical">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fabNewProjet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="16dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_add_to_photos_white_48dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_projet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_projet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgDim"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#af000000"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/ajouterProjetLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardProjet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:elevation="6dp"
+                android:padding="150dp"
+                card_view:cardBackgroundColor="@color/transpjet"
+                card_view:cardCornerRadius="16dp"
+                card_view:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/txtAddNomProjet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="15dp"
+                        android:ems="10"
+                        android:hint="@string/ProjectName"
+                        android:inputType="textShortMessage|text" />
+
+                    <EditText
+                        android:id="@+id/txtAddDescriptionProjet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtAddNomProjet"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:ems="10"
+                        android:hint="@string/ProjectDescription"
+                        android:inputType="textMultiLine"
+                        android:lines="3" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/btnCreerProjet"
+                        android:layout_below="@+id/txtAddDescriptionProjet">
+
+                        <TextView
+                            android:id="@+id/lblTerme"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/ProjectDeadline" />
+
+                        <CalendarView
+                            android:id="@+id/calAjouterProjet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="false"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentTop="true"
+                            android:layout_below="@+id/lblTerme"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="27dp"
+                            android:layoutMode="opticalBounds"
+                            android:outlineProvider="bounds"
+                            android:showWeekNumber="false" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btnCreerProjet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentTop="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:elevation="3dp"
+                        android:text="@string/ProjectAdd" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+        </FrameLayout>
+
+    </FrameLayout>
+</RelativeLayout>

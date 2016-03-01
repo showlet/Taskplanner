@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsProjetFragment" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentProject"
+        android:visibility="gone"
+        android:text="0" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="right"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentBottom="true"
+                android:elevation="4dp">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fabNewTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="16dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_add_to_photos_white_48dp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fabEditProject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="16dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_edit_white_48dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/fragmentDetailProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:orientation="vertical"
+                    android:paddingTop="4dp"
+                    tools:context=".DetailsProjetFragment">
+
+                    <cegepsth.taskplanner.tablayout.SlidingTabLayout
+                        android:id="@+id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/primary"
+                        android:elevation="4dp" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/tabLayoutPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imgDim"
+            android:background="#af000000"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/modifierProjetLayout"
+            android:visibility="gone">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="3dp"
+                    card_view:cardBackgroundColor="@color/transpjet"
+                    android:elevation="6dp"
+                    android:id="@+id/cardModifier"
+                    android:layout_gravity="center"
+                    android:padding="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textShortMessage|text"
+                            android:ems="10"
+                            android:id="@+id/txtModifierNomProjet"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="false"
+                            android:hint="@string/ProjectName"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:ems="10"
+                            android:id="@+id/txtModifierDescriptionProjet"
+                            android:layout_below="@+id/txtModifierNomProjet"
+                            android:layout_centerHorizontal="true"
+                            android:lines="3"
+                            android:hint="@string/ProjectDescription"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/btnModifierProjet"
+                            android:layout_below="@+id/txtModifierDescriptionProjet">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ProjectDeadline"
+                                android:id="@+id/lblTermeModofier"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp" />
+
+                            <CalendarView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/calModifierProjet"
+                                android:layout_alignParentStart="false"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="27dp"
+                                android:showWeekNumber="false"
+                                android:outlineProvider="bounds"
+                                android:layout_alignParentEnd="false"
+                                android:layout_marginBottom="20dp"
+                                android:layout_centerInParent="true"
+                                android:layout_alignParentTop="true"
+                                android:layoutMode="opticalBounds"
+                                android:layout_below="@+id/lblTermeModofier" />
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ProjectEdit"
+                            android:id="@+id/btnModifierProjet"
+                            android:layout_margin="10dp"
+                            android:layout_alignParentBottom="true"
+                            android:elevation="3dp"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:orientation="vertical" android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/ajouterTacheLayout"
+            android:layout_weight="2"
+            android:visibility="gone">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardElevation="3dp"
+                    card_view:cardBackgroundColor="@color/transpjet"
+                    android:elevation="6dp"
+                    android:id="@+id/cardProjet"
+                    android:layout_gravity="center"
+                    android:padding="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textShortMessage|text"
+                            android:ems="10"
+                            android:id="@+id/txtAddNomTache"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentStart="false"
+                            android:hint="@string/TaskName"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:ems="10"
+                            android:id="@+id/txtAddDescriptionTache"
+                            android:layout_below="@+id/txtAddNomTache"
+                            android:layout_centerHorizontal="true"
+                            android:lines="3"
+                            android:hint="@string/TaskDescription"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/btnCreerTache"
+                            android:layout_below="@+id/txtAddDescriptionTache">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/TaskDeadline"
+                                android:id="@+id/lblTerme"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="10dp" />
+
+                            <CalendarView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/callAjouterTache"
+                                android:layout_alignParentStart="false"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="27dp"
+                                android:showWeekNumber="false"
+                                android:outlineProvider="bounds"
+                                android:layout_alignParentEnd="false"
+                                android:layout_marginBottom="20dp"
+                                android:layout_centerInParent="true"
+                                android:layout_alignParentTop="true"
+                                android:layoutMode="opticalBounds"
+                                android:layout_below="@+id/lblTerme" />
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/TaskAdd"
+                            android:id="@+id/btnCreerTache"
+                            android:layout_margin="10dp"
+                            android:layout_alignParentBottom="true"
+                            android:elevation="3dp"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="20dp" />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+        </FrameLayout>
+    </FrameLayout>
+</RelativeLayout>

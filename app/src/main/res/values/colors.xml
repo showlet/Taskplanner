@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#292929</color>
+    <color name="primary_dark">#1d1d1d</color>
+    <color name="primary_darker">#0d0d0d</color>
+    <color name="accent">#FAFAFA</color>
+    <color name="tabsScrollColor">#263238</color>
+
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="transpjet">#f9222222</color>
+    <color name="lessjet">#e0383838</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="appBlue">#2aacaf</color>
+    <color name="appGreen">#48cc5a</color>
+    <color name="appPink">#E23D5C</color>
+    <color name="appOrange">#FF9728</color>
+    <color name="appPurple">#896dd9</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="drawer_background">#4b9496</color>
+    <color name="selected_gray">#37474F</color>
+</resources>

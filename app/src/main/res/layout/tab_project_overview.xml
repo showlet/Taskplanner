@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/relNomProjet">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Création de projets."
+            android:id="@+id/txtNomProjet"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@+id/txtNomProjet"
+            android:layout_marginTop="8dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/relNomProjet"
+        android:id="@+id/relDateFin" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date de fin: 18 janvier 2016 16:00"
+            android:id="@+id/txtDateFin"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textIsSelectable="false"
+            android:textSize="16dp"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/relDateFin"
+        android:id="@+id/relDescriptionProjet">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="baljlkjsdlkfjad lkj eofj eoijw foweijf owe jfwoe jfwoei jfwoief joiwe jfowiejf ojef ojewfoijwef oiwjef oiw foiwje foiwjef oijwe oijwe foijwef oijew foijwef oijwefoijwef oijwe foijwef oi eoi jwe foij weofij weoij wef oa fl jaefkjnqe fpq pqod jpsjvh pqoisfd afas dasd akjf kj hewwkefwe khwekw kwhje fwekjf hwe uhw eiwef hwie fhwe fwe ihwef ihwe fiwheifuhewfi uwhe wiefuhweiuwhfw eiuhfwe ihfewihfewew few few   eiuhwe iufe hwef wihe fhwif ihfw ihfw fwhifw fw hwf ihfwihfwi hfwihe fuwhef iwuehf we fiuhwe fiuhef iuhwef iuhwe fiuhwe iuhweif uhwe foiuq hefoiu hefoiuq hfeouqhe oqu foqiuhfe oqiu hfeweoih qeoi hqe oifhqoe ifuhqef oihqwe fe hfpoqjd pakj powqe jrpoaidj pqoie jfpoqd j"
+            android:id="@+id/txtDescriptionProjet"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:maxLines="10"
+            android:textIsSelectable="false"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/relDescriptionProjet"
+        android:id="@+id/relTaches" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="84 Tâches total"
+            android:id="@+id/txtTachesTotalProjet"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:maxLines="10"
+            android:textIsSelectable="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/relTaches"
+        android:id="@+id/relTachesActives" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3 Tâches pour aujourd&apos;hui"
+            android:id="@+id/txtTachesTodayProjet"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:maxLines="10"
+            android:textIsSelectable="false"
+            android:textColor="@color/appBlue" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/relTachesActives"
+        android:id="@+id/relTachesRetard" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8 Tâches en retard"
+            android:id="@+id/txtTachesRetardProjet"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:maxLines="10"
+            android:textIsSelectable="false"
+            android:textColor="@color/appPink" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/relTachesRetard"
+        android:id="@+id/relTachesFinies" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="17 Tâches Completées"
+            android:id="@+id/txtTachesFiniesProjet"
+            android:layout_centerVertical="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:maxLines="10"
+            android:textIsSelectable="false"
+            android:textColor="@color/appPurple" />
+    </RelativeLayout>
+
+</RelativeLayout>

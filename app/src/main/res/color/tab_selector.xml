@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Tab layout selector -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="#2aacaf" android:state_selected="true" />
+    <item android:color="#00f8ff" android:state_focused="true" />
+    <item android:color="#ff0000" android:state_pressed="true" />
+    <item android:color="#ffffff" />
+</selector>
